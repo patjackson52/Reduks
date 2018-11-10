@@ -4,7 +4,7 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Reduks-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4245)
 # EXPERIMENTAL Multiplatform Reduks Fork
 
-This is a experimental fork of the Kotlin "Reduks" 4.x branch altered to support multiplatform projects.  Currently only the core module is ported over.  
+This is a experimental fork of the Kotlin "Reduks" 4.x branch altered to support multiplatform projects.  Currently only the core module is ported over.  Included is a basic sample for Android & iOS.
 
 ## MPP concerns
 * sycronized block in SimpleStore of original project - this was removed due to lack of "sycronized" support on MPP.  This could be an issue if actions are dispatched from different threads. Possible solutions:  `mutex.lock()`, actors, or have the store implement CoroutineContext.
