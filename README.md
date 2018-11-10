@@ -2,6 +2,14 @@
 [![](https://jitpack.io/v/beyondeye/reduks.svg)](https://jitpack.io/#beyondeye/reduks)
 [![Slack channel](https://img.shields.io/badge/Chat-Slack-green.svg)](https://kotlinlang.slack.com/messages/reduks/)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Reduks-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4245)
+# EXPERIMENTAL Multiplatform Reduks Fork
+
+This is a experimental fork of the Kotlin "Reduks" 4.x branch altered to support multiplatform projects.  Currently only the core module is ported over.  
+
+## MPP concerns
+* sycronized block in SimpleStore of original project - this was removed due to lack of "sycronized" support on MPP.  This could be an issue if actions are dispatched from different threads. Possible solutions:  `mutex.lock()`, actors, or have the store implement CoroutineContext.
+* original project uses a Java library for persistent collections for performance reasons.  Currently there is not a stable kotlin MPP library, however there is one in the works (here)[https://github.com/Kotlin/kotlinx.collections.immutable]
+
 
 # Browse the Docs!
 For the full documentation see [here](https://beyondeye.gitbooks.io/reduks/content), or take a look at the [summary](SUMMARY.MD).
