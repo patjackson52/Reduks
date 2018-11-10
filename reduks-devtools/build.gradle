@@ -1,6 +1,0 @@
-dependencies {
-    implementation project(':reduks-core') //core dep is not exposed to consumer, that must include core explicitely
-    testImplementation libraries.rxJava
-}
-
-apply from: '../maven-push.gradle'

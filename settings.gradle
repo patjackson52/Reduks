@@ -1,17 +1,18 @@
-include ':reduks'
-include ':reduks-core-async'
-include ':reduks-core-modules'
-include ':reduks-android'
-include ':reduks-devtools'
-include ':reduks-rx'
-include ':reduks-kovenant'
-include ':reduks-async'
-include ':reduks-logger'
-include ':reduks-pcollections'
-include ':reduks-bus'
-include ':reduks-saga'
-include ':knit'
-//include ':code_fragments'
-//include ':example/counter'
-//include ':example/counter-android'
-project(':reduks').name = 'reduks-core'
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+            }
+        }
+    }
+}
+
+rootProject.name = 'reduks'
+
+
+enableFeaturePreview('GRADLE_METADATA')
+
+include ':lib'
+include ':sample'
+include ':sample:app'
