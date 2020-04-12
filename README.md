@@ -2,6 +2,8 @@
 [![](https://jitpack.io/v/beyondeye/reduks.svg)](https://jitpack.io/#beyondeye/reduks)
 [![Slack channel](https://img.shields.io/badge/Chat-Slack-green.svg)](https://kotlinlang.slack.com/messages/reduks/)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Reduks-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4245)
+
+# NOT MAINTAINED - LOOK AT www.reduxkotlin.org FOR A MULTIPLATFORM REDUX LIBRARY
 # EXPERIMENTAL Multiplatform Reduks Fork
 
 This is a experimental fork of the Kotlin "Reduks" 4.x branch altered to support multiplatform projects.  Currently only the core module is ported over.  Included is a basic sample for Android & iOS.
